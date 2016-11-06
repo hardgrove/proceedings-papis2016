@@ -1,0 +1,90 @@
+ % Most packages need to be loaded before hyperref
+ % so put them in the definition of \jmlrprehyperref
+
+\def\jmlrprehyperref{%
+ % Packages used by imported articles:
+ \usepackage{lipsum}
+ \usepackage{graphicx}
+% \usepackage{natbib}
+ \usepackage{listings}
+ \usepackage{url}
+ \usepackage{longtable}% for long tables
+ \usepackage{booktabs}
+ \usepackage[load-configurations=version-1]{siunitx} % newer version
+ \usepackage{multirow}
+}
+
+\documentclass[wcp]{jmlrbook}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+ % Title is added to the PDF properties. Optional argument
+ % is used instead, if present.
+ %\title[Short Title]{Big Long Title}
+\title[PAPIs 2016]{3rd International Conference on Predictive Applications and APIs}
+
+\author{Louis Dorard, Keiran Thompson and Florian Douetteau}
+
+\subtitle{\thejmlrworkshop}
+
+\jmlrvolume{TBD}
+\jmlryear{2016}
+%\jmlrsubmitted{submission date}
+%\jmlrpublished{publication date}
+\jmlrworkshop{PAPIs 2016} % W&CP title
+%\jmlrlocation{Boston, United States}
+
+\logo[\href{http://www.papis.io/2016}]{\includegraphics{bookLogo}}
+
+\begin{document}
+\maketitle
+
+\frontmatter
+
+\begin{preface}
+
+  These proceedings contain the papers from X of the advanced talks presented at the 3rd International Conference on Predictive Applications and APIs (\href{http://papis.io/2016}{PAPIs '16}), held in Boston, United States on October 11-12, 2016.
+
+  The rest of this preface provides an intro to the papers in these proceedings.
+
+  \section*{Acknowledgments}
+
+  \textbf{Program Committee:}
+  ...
+  \textbf{Volunteers:}
+  ...
+
+  In addition to the entire program committee and student volunteers, we would like to thank the Local Committee ..., who took care of local coordination and arrangements for PAPIs '16.
+  We are grateful for the financial support provided by our corporate sponsors \href{http://sponsor.com}{Sponsor}.
+  Finally, we wish to thank the authors for their time and effort in creating such a fine program.
+
+\begin{signoff}{February 2016}
+\Editor{Louis Dorard, PAPIs '16 General Chair\\
+\mailto{louis@dorard.me}}
+\Editor{Keiran Thompson, PAPIs '16 Program Co-chair\\
+Stanford\\
+\mailto{...}}
+\Editor{Florian Douetteau, PAPIs '16 Program Co-chair\\
+Dataiku\\
+\mailto{...}}
+\end{signoff}
+
+
+\end{preface}
+
+\tableofcontents
+
+\mainmatter
+
+\begin{jmlrpapers}
+  \addtocpart{Introduction}
+  % syntax: \importpaper[label]{directory}{filename}
+  \importpaper{dorard16}{dorard16}
+  \importpaper{gutierrez16}{gutierrez16}
+  \importpaper{lewers16}{lewers16}
+  \importpaper{li16}{li16}
+\end{jmlrpapers}
+
+
+\end{document}
